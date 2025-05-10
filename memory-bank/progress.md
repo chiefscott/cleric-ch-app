@@ -31,27 +31,25 @@ This document tracks the project's current status, what has been completed, what
 - **Installer Created:** Successfully built `cleric_ch_app.exe`.
 - **README.md Created:** Generated.
 - **GitHub Prep Files Created:** `.gitignore`, `LICENSE` (MIT), `CONTRIBUTING.md` created.
+- **Local Git Repository Initialized:** `git init` successful.
+- **Remote GitHub Repository Connected:** `git remote add origin ...` successful.
+- **Initial Commit Pushed to GitHub:** `git add .`, `git commit ...`, `git branch -M main`, `git push -u origin main` all successful.
+- **Log Parsing Regex for Varied Cleric Titles:** Updated regex in `parse_log_for_clerics` to specifically filter for "Cleric", "Vicar", "Templar", or "High Priest" class titles, addressing an end-user reported bug.
 
 ## What's Left to Build (Based on User Feedback)
 
-- **GitHub Setup - Phase 2 (Git & GitHub Repo):**
-    - User to configure Git global settings (name, email).
-    - User to create a new repository on GitHub.
-    - Connect local project to the GitHub repository (`git init`, `git remote add origin`).
-- **GitHub Setup - Phase 3 (First Commit & Push):**
-    - Stage files (`git add .`).
-    - Commit files (`git commit -m "Initial commit"`).
-    - Rename default branch to `main` if necessary (`git branch -M main`).
-    - Push to GitHub (`git push -u origin main`).
-- **Final User Confirmation:** After GitHub setup.
+- **Testing of Cleric Title Parsing Fix:** User to test the latest regex change.
+- **Commit and Push Bug Fix:** After successful testing, commit the changes and push to GitHub.
+- **Final User Confirmation:** User to confirm satisfaction with the project on GitHub after the bug fix.
 
 ## Current Status
 
-**Phase 1 of GitHub preparation is complete.** Essential files (`.gitignore`, `README.md`, `LICENSE`, `CONTRIBUTING.md`) are in place. The application itself is functionally complete and tested. Ready to guide the user through initializing Git locally and connecting to a GitHub repository.
+**A bug related to log parsing for varied cleric titles has been addressed.** The application code (`cleric_ch_app.py`) has been updated with a more specific regex. Memory bank documentation is being updated. Pending user testing, and then changes will be committed and pushed to GitHub. The project was previously set up on GitHub, with all local files (as per `.gitignore`) committed and pushed to the `main` branch.
 
 ## Known Issues (Actively Being Addressed)
 
-- **Log Parsing Accuracy:** **(Resolved - Fifth Pass)**.
+- **Log Parsing Fails for Varied Cleric Titles:** Reported by an end-user that clerics were not being found if their in-game class title was not one of the specific known cleric titles. **(Addressed by updating regex to include "Cleric|Vicar|Templar|High Priest")**
+- **Log Parsing Accuracy:** **(Previously Resolved - Fifth Pass)**.
 - **List Management Usability:** **(Addressed)**.
 - **Missing Scrollbars:** **(Addressed)**.
 

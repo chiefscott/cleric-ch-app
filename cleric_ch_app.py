@@ -518,7 +518,8 @@ class ClericCHApp:
             line_no_timestamp = re.sub(r'^\[.*?\]\s*', '', line_content).strip()
             self.log_to_console(f"      Line (no timestamp): '{line_no_timestamp}'")
             
-            match = re.search(r'^(?:AFK\s+)?\[\d+\s+\w+\]\s+(\w+)', line_no_timestamp)
+            # Regex now specifically looks for "Cleric", "Vicar", "Templar", or "High Priest"
+            match = re.search(r'^(?:AFK\s+)?\[\d+\s+(?:Cleric|Vicar|Templar|High Priest)\]\s+(\w+)', line_no_timestamp)
             if match:
                 alias = match.group(1) 
                 self.log_to_console(f"      Regex match! Alias: '{alias}'")

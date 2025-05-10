@@ -34,7 +34,7 @@ This document details the technologies, development setup, and technical constra
 
 ## Tool Usage Patterns
 
-- **Log Parsing:** Efficiently read file backwards line-by-line using a generator (`_reverse_readline`). Identify the last trigger phrase. Parse subsequent lines, identifying start/end markers (`---`, `There is/are...`) to isolate the player list block. Use regular expressions (`re.search`) within this block to extract cleric aliases.
+- **Log Parsing:** Efficiently read file backwards line-by-line using a generator (`_reverse_readline`). Identify the last trigger phrase. Parse subsequent lines, identifying start/end markers (`---`, `There is/are...`) to isolate the player list block. Use regular expressions (`re.search`) within this block to extract player aliases. The regex specifically filters for lines containing cleric class titles: "Cleric", "Vicar", "Templar", or "High Priest" (e.g., `r'^(?:AFK\s+)?\[\d+\s+(?:Cleric|Vicar|Templar|High Priest)\]\s+(\w+)'`).
 - **GUI Event Handling:** Standard event-driven programming for button clicks (`ttk.Button`), dropdown selections (`ttk.Combobox`, `<<ComboboxSelected>>`), checkbox changes (`ttk.Checkbutton`), listbox selections (`tk.Listbox`, `<<ListboxSelect>>`), and dialog interactions (`simpledialog`).
 - **List Management:** Use Python lists (`self.clerics`, `self.fluffers`) as the model. Update lists based on user actions (Add, Remove, Move Up/Down, Move to Fluffers/Chain buttons). Refresh `tk.Listbox` content from the model lists.
 - **Text Manipulation:** String formatting (`f-strings`) and templating for generating macros and assignment messages.
