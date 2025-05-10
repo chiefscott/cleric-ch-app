@@ -59,4 +59,4 @@ The application is currently stable and all core features are implemented and te
 
 ---
 
-Built by [Your Name/GitHub Username]
+Built by [chiefscott]
