@@ -38,3 +38,6 @@ settings.json
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Project specific ignores
+memory-bank/
