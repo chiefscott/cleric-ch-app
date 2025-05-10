@@ -31,7 +31,7 @@ This application is built with Python and Tkinter for its graphical user interfa
 
 ## How to Use
 
-1.  **Download:** Obtain the `cleric_ch_app.exe` file from the [Releases page](link-to-your-github-releases-page).
+1.  **Download:** Obtain the `cleric_ch_app.exe` file from the [Releases page](https://github.com/chiefscott/cleric-ch-app/releases).
 2.  **Run:** Execute `cleric_ch_app.exe`. No installation is required.
 3.  **Setup Tab:**
     *   Click "Browse" to select your EverQuest log file (e.g., `eqlog_YourCharacter_pq.proj.txt`). This path will be remembered.
